@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=afhamisis&label=Profile%20views&color=0e75b6&style=flat" alt="afhamisis" /> </p>
 
-- 🔭 I’m currently working at [LIST (Luxembourg Institute of Science and Technology))](LORSAT.LU)
+- 🔭 I’m currently working at [LIST (Luxembourg Institute of Science and Technology)](https://wwww.LORSAT.LU)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
