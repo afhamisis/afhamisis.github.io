@@ -1,6 +1,16 @@
 body {
-	display: grid;
-	place-items: center;
-	height: 100vh;
-	background: #1b262c
+    background-color: #000;
+    margin: 0;
+    overflow: hidden;
+}
+
+#drawing_canvas {
+    position: absolute;
+    margin: auto;
+    width: 768px;
+    height: 768px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
