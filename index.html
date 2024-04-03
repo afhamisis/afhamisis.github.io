@@ -1033,11 +1033,21 @@ addEventListener("mousemove", (e) => {
   }
 });
 </script>
+<script>
+  <script>
+    function redirectToWebsite() {
+        // Change the URL to the desired website
+        var websiteURL = "https://example.com";
+        // Redirect to the website
+        window.location.href = websiteURL;
+    }
+</script>
+</script>
 <div class='planet-container'>
     <div class='night'></div>
     <div class='day'></div>
     <div class='clouds'></div>
     <div class='inner-shadow'></div>
 </div>
-<div><button class="custom-btn btn-12"><span>Click!</span><span>About Me</span></button></div>
+<div><button class="custom-btn btn-12" onclick="redirectToWebsite()><span>Click!</span><span>About Me</span></button></div>
 </html>
