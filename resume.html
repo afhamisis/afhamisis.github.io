@@ -1,191 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Text Animation</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: black;
+            color: green; /* Matrix green color */
+            overflow: hidden;
+            margin: 0;
+        }
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: pre-wrap;
+            text-align: left-side;
+            text-shadow: 0 0 1px green, 0 0 2px green, 0 0 3px green, 0 0 4px green, 0 0 5px green;
+        }
+    </style>
 </head>
-<style>
-body {
-  font-family: 'Source Sans Pro',Helvetica Neue,Helvetica,Arial,sans-serif; 
-  font-size: 16px;
-  line-height: 1.75;
-}
+<body>
+    <div id="text"></div>
+    <script>
+        var text = `
+        Welcome to My Website.
+		
+        My name is Mohammad Afhamisis. I am currently a researcher, working in
+        Luxembourg Institute of Science and Technology.
+        
+        This page is currently under construction.
+        So, for now, you can check my linkedin profile and contact me.
+        
+        Have a nice day!
+        
+        `;
+        var index = 0;
+        var delay = 50; // Adjust the delay between characters here (in milliseconds)
 
-#timeline {
-  display: flex;
-  background-color: #031625;
-
-  &:hover {
-    .tl-item {
-      width: 23.3333%;
-    }
-  }
-}
-
-.tl-item {
-  transform: translate3d(0, 0, 0);
-  position: relative;
-  width: 25%;
-  height: 100vh;
-  min-height: 600px;
-  color: #fff;
-  overflow: hidden;
-  transition: width 0.5s ease;
-  
-  &:before, &:after {
-    transform: translate3d(0, 0, 0);
-    content: '';
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-  }
-
-  &:after {
-    background: transparentize(#031625, 0.15);
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-
-  &:before {
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 75%);
-    z-index: 1;
-    opacity: 0;
-    transform: translate3d(0, 0, 0) translateY(50%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  &:hover {
-    width: 30% !important;
-    
-    &:after {
-      opacity: 0;
-    }
-
-    &:before {
-      opacity: 1;
-      transform: translate3d(0, 0, 0) translateY(0);
-      transition: opacity 1s ease, transform 1s ease 0.25s;
-    }
-    
-    .tl-content {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.75s ease 0.5s;
-    }
-
-    .tl-bg {
-      filter: grayscale(0);
-    }
-  }
-}
-
-.tl-content {
-  transform: translate3d(0, 0, 0) translateY(25px);
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  margin: 0 1.618em;
-  top: 55%;
-  opacity: 0;
-  
-  h1 {
-    font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
-    color: #1779cf;
-    font-size: 1.44rem;
-    font-weight: normal;
-  }
-}
-
-.tl-year {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 1;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  
-  p {
-    font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 1.728rem;
-    line-height: 0;
-  }
-}
-
-.tl-bg {
-  transform: translate3d(0, 0, 0);
-  position: absolute;
-  width: 100%; height: 100%;
-  top: 0; left: 0;
-  background-size: cover;
-  background-position: center center;
-  transition: filter 0.5s ease;
-  filter: grayscale(100%);
-}
-
-
-</style>
-<body></body>
-<section id="timeline">
-  
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(experience.PNG)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">Experience</p>
-    </div>
-
-    <div class="tl-content">
-      <h1>Lorem ipsum dolor sit</h1>
-      <p>Under Construction for Experienceursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit am</p>
-    </div>
-
-  </div>
-
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">Education</p>
-    </div>
-
-    <div class="tl-content">
-      <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
-      <p>Under Construction for Education</p>
-    </div>
-
-  </div>
-
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/803/803/nature)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">2014</p>
-    </div>
-
-    <div class="tl-content">
-      <h1 class="f3 text--accent ttu">Phasellus mauris elit</h1>
-      <p>Mauris cursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amet varius. Maecenas ac pulvinar nisi. Fusce vitae nunc ultrices, tristique dolor at, porttitor dolor. Etiam id cursus arcu, in dapibus nibh. Pellentesque non porta leo. Nulla eros odio, egestas quis efficitur vel, pretium sed.</p>
-    </div>
-
-  </div>
-
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">2016</p>
-    </div>
-
-    <div class="tl-content">
-      <h1 class="f3 text--accent ttu">Mauris vitae nunc elem</h1>
-      <p>Suspendisse ac mi at dolor sodales faucibus. Nunc sagittis ornare purus non euismod. Donec vestibulum efficitur tortor, eget efficitur enim facilisis consequat. Vivamus laoreet laoreet elit. Ut ut varius metus, bibendum imperdiet ex. Curabitur diam quam, blandit at risus nec, pulvinar porttitor lorem. Pellentesque dolor elit.</p>
-    </div>
-
-  </div>
-</section>
+        function typeText() {
+            var div = document.getElementById('text');
+            div.textContent += text[index];
+            index++;
+            if (index < text.length) {
+                setTimeout(typeText, delay);
+            } else {
+                // Text typing finished, now add the hyperlink
+                var link = document.createElement('a');
+                link.href = 'https://www.linkedin.com/in/mohammad-afhamisis/';
+                link.textContent = 'My LinkedIn Profile';
+                div.appendChild(link);
+            }
+        }
+        typeText();
+    </script>
+</p>
+</body>
 </html>
